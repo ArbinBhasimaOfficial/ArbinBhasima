@@ -1,0 +1,8 @@
+CSS
+    Cascading Style Sheets
+
+    used to style HTML elements
+
+    and make your page preetty
+
+avoid inline css

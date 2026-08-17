@@ -1,0 +1,41 @@
+My Path to Becoming an AI Software Engineer Starts Here
+
+From Absolute Basics to Professional Level The absolute basics of AI, Web Development, Software Development, Software Engineering,
+Data Structures & Algorithms (DSA), and lots of LeetCode problems. This won't stop anytime while I am alive. This entire journey is
+self-taught and consists of many beginner code bases and small projects.
+
+The journey starts with learning. This file is for myself to keep track of my progress. AI tools like ChatGPT, Claude, and Gemini
+will be used to gather learning resources. YouTube videos will be used for learning. Courses will be used for learning.
+
+Why AI Software Engineer?
+Becoming an AI Software Engineer aligns with my interest in implementing AI models, AI-powered systems, and general engineering concepts.
+
+My Stack:
+  Web Development: HTML, CSS, JavaScript, TypeScript, Tailwind CSS, React, Next.js, Node.js, Express.js, Nest.js, JSON
+  AI: Python, LangChain, OpenAI, PyTorch, LangChain.js, Pandas, NumPy, Scikit-learn, Matplotlib, and other libraries
+  Cloud: AWS, Azure
+  Tools: Git, Docker, Kubernetes, and others
+  Databases: SQL and NoSQL
+  ORM: Prisma
+  Languages: C++, Golang
+
+Preferred IDE:
+  https://zed.dev/docs/
+  Zed or VS Code. I prefer Zed's features and shortcuts because they make coding faster and easier.
+  I will not use AI agents during the learning process itself; I will only implement AI agents within the projects I build.
+
+AIs like ChatGPT, Gemini, and Claude will be used to document this journey more clearly.
+
+Project Declarations:
+  Project declarations are crucial for accelerating one's programming learning curve.
+  My main goal on this journey is to create AI-powered, full-fledged, real-time, professional applications (such as a Market Intelligence Application).
+  I will be creating my own system designs, patterns, architecture, UI/UX, and more.
+  More details will be covered later.
+  Small projects like a weather app, a to-do list, a rock-paper-scissors app, and others will be created as part of this journey.
+
+Day Count Begins:
+
+Day 1 – Wednesday – 2026/08/12
+  Today I will start HTML and finish it, as I am not new to HTML and already have a good understanding of it.
+  HTML is the core building block of the web. It is essential to learn how it works and how to use it idiomatically.
+  More details about HTML are located in the HTML folder.

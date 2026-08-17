@@ -1,0 +1,79 @@
+HTML tags define elements that the browser renders to build structure, display text, handle media, collect input, and organize data.
+
+Here is a quick breakdown of the core tags you listed, along with a few fundamental missing ones to round out your HTML folder notes.
+
+Core Tags Breakdown
+
+Document Structure:
+
+  <!DOCTYPE html>: Declares document type to the browser.
+
+  <html>: Root element wrapper.
+
+  <head>: Contains metadata, title, external script, and style links.
+
+  <body>: Contains all visible page contents.
+
+Text & Headings:
+
+  <h1>–<h6>: Heading tags, structured hierarchically from highest rank (<h1>) to lowest (<h6>).
+
+  <p>: Paragraph block for text content.
+
+  <span>: Generic inline container for styling specific sections of text without structural line breaks.
+
+Layout & Containers:
+
+  <div>: Generic block-level container used to group elements and apply styles or structural layouts.
+
+  <hr>: Horizontal rule; creates a thematic break or line across the block.
+
+Navigation & Media:
+
+  <a>: Anchor tag; creates hyperlinks using the href attribute.
+
+  <img>: Embeds an image using src and alt attributes.
+
+Lists:
+
+  <ul>: Unordered list (bulleted).
+
+  <ol>: Ordered list (numbered).
+
+  <li>: List item (placed inside <ul> or <ol>).
+
+Forms & User Input:
+
+  <form>: Wrapper for interactive form controls.
+
+  <label>: Defines a caption for a form element (uses for attribute).
+
+  <input>: Flexible interactive field (text, checkbox, radio, password, etc.).
+
+  <button>: Clickable button used inside or outside forms.
+
+Tables:
+
+  <table>: Container for tabular data.
+
+  <tr> / <th> / <td>: Table row, table header cell, and table data cell.
+
+Essential Semantic Tags to Add
+
+  Modern idiomatic HTML relies heavily on Semantic Tags rather than relying solely on <div> elements. They clarify layout hierarchy for search engines and screen readers:
+
+  <header>: Introduces page or section navigation and logos.
+
+  <nav>: Block reserved specifically for navigation links.
+
+  <main>: Wraps the primary unique content of the document.
+
+  <section>: Groups related content into a distinct thematic region.
+
+  <article>: Encloses self-contained, reusable content (like a blog post or news item).
+
+  <aside>: Contains supplementary content related to surrounding content (like a sidebar).
+
+  <footer>: Defines bottom page credentials, copyright, or contact links.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML

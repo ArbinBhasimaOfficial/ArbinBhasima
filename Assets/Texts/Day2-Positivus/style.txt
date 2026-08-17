@@ -1,0 +1,20 @@
+Typo Graphy
+    Desktop
+        H1 -> 60px
+        H2 -> 40px
+        H3 -> 30px
+        H4 -> 20px
+        p -> 18px
+
+
+    Mobile
+        H1 -> 43px
+        H2 -> 36px
+        H3 -> 26px
+        H4 -> 18px
+        p -> 16px
+
+Colors
+    Primary: #B9FF66
+    Secondary: #191A23
+    Tertiary: #F3F3F3
