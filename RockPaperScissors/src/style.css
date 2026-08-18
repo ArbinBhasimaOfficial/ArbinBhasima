@@ -1,0 +1,120 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1700px;
+    margin-inline: auto;
+}
+
+:root {
+    --color-primary: #009DB2;
+    --color-secondary: #0C0A18;
+    --color-tertiary: #E8EDED;
+}
+
+body {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.RockPaperScissorsContainer{
+    margin-block-start: 100px;
+    line-height: 1.7;
+}
+
+
+.ROS-Form {
+    display: grid;
+    text-align: center;
+    justify-content: space-around;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color-primary);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.score span:last-child {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-top: 0.25rem;
+}
+
+.choices {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.75rem 0.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 3px solid;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-color: var(--color-primary);
+}
+
+.btn:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-secondary);
+    color: var(--color-tertiary);
+}
+
+.result-display {
+    min-height: 80px;
+}
+
+#choices-text {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+#result-text {
+    font-size: 1.25rem;
+}

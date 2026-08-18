@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./src/assets/favicon.ico" />
+        <link rel="stylesheet" href="./src/style.css" />
+        <script src="./src/main.ts" defer></script>
+        <title>Rock Paper Scissors - Arbin Bhasima</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <h1>Rock Paper Scissors</h1>
+
+                <div class="score-board">
+                    <div class="score">
+                        <span>Player</span>
+                        <span id="player-score">0</span>
+                    </div>
+                    <div class="score">
+                        <span>Computer</span>
+                        <span id="computer-score">0</span>
+                    </div>
+                </div>
+
+                <div class="choices">
+                    <button class="btn" data-choice="rock">👊 Rock</button>
+                    <button class="btn" data-choice="paper">🧻 Paper</button>
+                    <button class="btn" data-choice="scissors">
+                        ✂️ Scissors
+                    </button>
+                </div>
+
+                <div class="result-display">
+                    <p id="choices-text">Make your move!</p>
+                    <h2 id="result-text"></h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
