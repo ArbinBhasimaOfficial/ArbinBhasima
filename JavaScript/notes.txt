@@ -1,0 +1,13 @@
+Learning JS
+
+js make website interactive
+
+what is js?
+ - giving instructions to a computer
+    code
+ - the computer follows our instructions
+    running the code
+
+
+
+js basic
