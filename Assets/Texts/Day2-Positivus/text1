@@ -21,7 +21,7 @@ Hero Section
 After Hero Section
     h2 - Services
     P -> At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
-    h2 -> Search engine optimization
+    h3 -> Search engine optimization
     p -> a -> Learn more
     h3 -> Pay-per-click advertising
     p -> a -> Learn more
@@ -35,7 +35,7 @@ After Hero Section
     p -> a -> Learn more
 
 After above section
-    h4 -> Let's make things happen
+    h3 -> Let's make things happen
     p -> Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.
     Button -> Get your free proposal
 
