@@ -54,3 +54,9 @@ document.body.innerHTML = "Arbin Bhasima";
 document.body.innerHTML = "";
 // ''
 // to make web page blank
+
+
+console.log(2+2)
+console.log('ziontan')
+console.log("Douzo")
+console.log('some' + 'text')
