@@ -1,20 +1,33 @@
-import express from "express"
-import type { Express } from "express"
-import { V1Router } from "./v1/router.js";
+import express, { type Router, type Express } from "express"
 
-export function createServer() {
-  const app = express()
-  app.use(express.json())
-  registerRoutes(app)
-  return app
-}
+export class Server {
+  public app: Express;
 
-export function listen(app: Express) {
-  app.listen(1570, () => {
-    console.log(`Server is running on port ${1570}`)
-  })
-}
+  constructor() {
+    this.app = express();
+    return this;
+  }
 
-export function registerRoutes(app: Express) {
-  app.use("api/v1", V1Router)
+  startServer() {
+    this.app.listen(3000, () => {
+      console.log(`Server is running on port 3000`);
+    });
+    return this;
+  }
+
+  createGlobalPrefix(prefix: string) {
+    // middleware
+    this.app.use(`/${prefix}`, (req, res, next) => {
+      console.log(
+        `Global prefix ${prefix} applied to request: ${req.method} ${req.url}`,
+      );
+      next();
+    });
+    return this;
+  }
+
+  registerRoutes(prefix: string, router: Router) {
+    this.app.use(`/api/${prefix}`, router);
+    return this ;
+  }
 }
