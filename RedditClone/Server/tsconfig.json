@@ -6,10 +6,8 @@
 
     /* Environment Settings */
     "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "target": "es2022",
-    "lib": ["es2022"],
-    "types": ["node"],
+    "target": "esnext",
+    "types": [],
 
     /* Other Outputs */
     "sourceMap": false,
