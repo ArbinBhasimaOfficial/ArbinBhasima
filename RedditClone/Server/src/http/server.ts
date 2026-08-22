@@ -15,6 +15,17 @@ export class Server {
     return this;
   }
 
+  registerHealthCheckRoute() {
+    // to check is server is properly responding
+    this.app.get("/", (req, res) => {
+      res.redirect("/health");
+    });
+    this.app.use("/health", (req, res) => {
+      res.status(200).send("OK");
+    });
+    return this;
+  }
+
   createGlobalPrefix(prefix: string) {
     // middleware
     this.app.use(`/${prefix}`, (req, res, next) => {
@@ -30,4 +41,10 @@ export class Server {
     this.app.use(`/api/${prefix}`, router);
     return this ;
   }
+
+  registerModuleRouter(baseRouter: Router, moduleRouter: Router) {
+    this.app.use(baseRouter, moduleRouter);
+    return this;
+  }
+
 }

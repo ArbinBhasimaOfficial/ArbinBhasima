@@ -1,8 +1,8 @@
 import { Router } from "express";
 const v1Router = Router();
 
-v1Router.get("/", (req, res) => {
-  res.send("v1");
+v1Router.use("/v1", (req, res, next) => {
+  next();
 })
 
 export { v1Router };
