@@ -5,7 +5,11 @@ info:
 
 http:
   method: PATCH
-  url: "{{BASE_URL}}/api/v1/post/id"
+  url: "{{BASE_URL}}/api/v1/post/:id"
+  params:
+    - name: id
+      value: "{{PostId}}"
+      type: path
   auth: inherit
 
 settings:

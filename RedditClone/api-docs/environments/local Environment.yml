@@ -2,4 +2,5 @@ name: local Environment
 variables:
   - name: BASE_URL
     value: http://localhost:3000
-    description: ""
+  - name: PostId
+    value: "90"
