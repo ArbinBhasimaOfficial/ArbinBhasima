@@ -1,63 +1,37 @@
-
 import React from "react";
 import MainLayout from "./components/layout/main-layout";
 
 type Move = "Rock" | "Paper" | "Scissors";
-const choices = ["Rock", "Paper", "Scissors"];
-const movesAI: Move[] = ["Rock", "Paper", "Scissors"];
+type Winner = "human" | "ai" | "draw";
+
+const choices: Move[] = ["Rock", "Paper", "Scissors"];
+
 const winPair: Record<Move, Move> = {
   Rock: "Scissors",
   Paper: "Rock",
   Scissors: "Paper",
 };
 
-function RockPaperScissors() {
+function determineWinner(humanMove: Move, aiMove: Move): Winner {
+  if (humanMove === aiMove) return "draw";
+  return winPair[humanMove] === aiMove ? "human" : "ai";
+}
+
+export default function RockPaperScissors() {
   const [humanMove, setHumanMove] = React.useState<Move | undefined>(undefined);
   const [aiMove, setAiMove] = React.useState<Move | undefined>(undefined);
-  const [winner, setWinner] = React.useState<"human" | "ai" | "draw" | undefined>(undefined);
+  const [winner, setWinner] = React.useState<Winner | undefined>(undefined);
 
   function handleClick(move: Move) {
-    setHumanMove(move); // async in nature
+    setHumanMove(move);
 
-    // chose a move for ai
-    const randomMoveIndex = Math.floor(Math.random() * movesAI.length);
-    const moveByAI = movesAI[randomMoveIndex];
+    const randomMoveIndex = Math.floor(Math.random() * choices.length);
+    const moveByAI = choices[randomMoveIndex];
     setAiMove(moveByAI);
 
     const winnerPlayer = determineWinner(move, moveByAI);
     setWinner(winnerPlayer);
   }
-
-  // find out winner
-  function determineWinner(humanMove: Move, aiMove: Move) {
-    if (humanMove === aiMove)
-      return "draw"
-    else {
-      if (humanMove === "Rock") {
-        if (aiMove === "Paper") {
-          return "ai"
-        } else {
-          return "human"
-        }
-      } else if (humanMove === "Paper") {
-        if (aiMove === "Scissors") {
-          return "ai"
-        } else {
-          return "human"
-        }
-      } else if (humanMove === "Scissors") {
-        if (aiMove === "Rock") {
-          return "ai"
-        } else {
-          return "human"
-        }
-      }
-    }
-  }
-
-
-  // on mount, on update, calls handleClick 2 times
-  // on unmount
 
   return (
     <MainLayout>
@@ -85,12 +59,12 @@ function RockPaperScissors() {
         <div className="rock-paper-scissors-Header">
           <h1>Welcome to Rock, Paper and Scissors.</h1>
         </div>
-        <div
-          className="rock-paper-scissors-text"
-        >
+        <div className="rock-paper-scissors-text">
           <p>Choose your move:</p>
         </div>
+
         <ChoicesFunc handleClick={handleClick} />
+
         <div className="rock-paper-scissors-text">
           <p>Your move: {humanMove ?? "You haven't chosen a move yet."}</p>
         </div>
@@ -98,14 +72,14 @@ function RockPaperScissors() {
           <p>Zion's move: {aiMove ?? "Zion will play when you choose your move."}</p>
         </div>
         <div className="rock-paper-scissors-text">
-          <GameState winner={winner}/>
+          <GameState winner={winner} />
         </div>
       </div>
     </MainLayout>
   );
 }
 
-function ChoicesFunc(props: { handleClick: (move: Move) => void }) {
+function ChoicesFunc({ handleClick }: { handleClick: (move: Move) => void }) {
   return (
     <div
       style={{
@@ -118,9 +92,11 @@ function ChoicesFunc(props: { handleClick: (move: Move) => void }) {
       }}
     >
       {choices.map((choice) => (
-        <button key={choice} onClick={() => {
-          props.handleClick(choice as Move);
-        }}  className="game-btn">
+        <button
+          key={choice}
+          onClick={() => handleClick(choice)}
+          className="game-btn"
+        >
           {choice}
         </button>
       ))}
@@ -128,11 +104,9 @@ function ChoicesFunc(props: { handleClick: (move: Move) => void }) {
   );
 }
 
-function GameState(props: { winner: "human" | "ai" | "draw" | undefined }) {
-  if (props.winner === "draw") return <div>It's a draw!</div>
-  else if (props.winner === "human") return <div>You win!</div>
-  else if (props.winner === "ai") return <div>Zion wins!</div>
-  else return <div>No Winner Yet</div>
+function GameState({ winner }: { winner: Winner | undefined }) {
+  if (winner === "draw") return <div>It's a draw!</div>;
+  if (winner === "human") return <div>You win!</div>;
+  if (winner === "ai") return <div>Zion wins!</div>;
+  return <div>No Winner Yet</div>;
 }
-
-export default RockPaperScissors;
