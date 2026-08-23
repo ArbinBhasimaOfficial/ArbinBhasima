@@ -1,7 +1,7 @@
 import Footer from './footer';
 import Header from './header';
 import Sidebar from './sidebar';
-import "../../../styles/main-layout.css"
+import "../../../styles/layout/main-layout/main-layout.css"
 
 export default function MainLayout(props: {
   children: React.ReactNode

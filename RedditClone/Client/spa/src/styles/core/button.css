@@ -1,0 +1,13 @@
+.btn {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+
+.btn:hover {
+    color: cyan;
+    transition: color 100ms ease-in;
+}

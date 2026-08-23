@@ -1,0 +1,28 @@
+.footer {
+    padding-block: 60px;
+    grid-row: 3 / 4;
+    border-block-start: 1px solid #ccc;
+    font-size: 1.125rem;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__nav {
+    line-height: 1.6;
+}
+
+.footer__nav__list__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.footer__nav__list__items__item:hover {
+    color: cyan;
+}

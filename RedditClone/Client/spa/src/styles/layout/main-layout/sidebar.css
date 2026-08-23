@@ -1,0 +1,20 @@
+.sidebar {
+    padding: 10px;
+    grid-column: 1/2;
+    grid-row: 2/-1;
+    border-inline-end: 1px solid #ccc;
+    margin-inline-end: 20px;
+}
+
+.project-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-info img {
+    width: 50px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    border-radius: 10px;
+}
