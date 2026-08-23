@@ -2,7 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/index.css'
 // import App from './App.tsx'
-import RockPaperScissors from './RockPaperScissors.tsx';
+// import RockPaperScissors from './RockPaperScissors.tsx';
+import TicTacToe from './TicTacToe.tsx';
 // import AboutUs from './AboutUs.tsx'
 
 createRoot(document.getElementById('root')!).render(
@@ -10,7 +11,8 @@ createRoot(document.getElementById('root')!).render(
     <div>
       {/*<App />*/}
       {/*<AboutUs />*/}
-      <RockPaperScissors />
+      {/*<RockPaperScissors />*/}
+      <TicTacToe />
     </div>
   </StrictMode>,
 )
