@@ -1,11 +1,11 @@
 import MainLayout from "./components/layout/main-layout"
 
-function App() {
+function AboutUs() {
   return (
     <MainLayout>
-      <h1>This is Home Page</h1>
+      <h1>This is About Us Page</h1>
     </MainLayout>
   );
 }
 
-export default App
+export default AboutUs

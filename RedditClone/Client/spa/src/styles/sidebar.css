@@ -1,0 +1,7 @@
+.sidebar {
+    padding: 10px;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    border-inline-end: 1px solid #ccc;
+    margin-inline-end: 20px;
+}
