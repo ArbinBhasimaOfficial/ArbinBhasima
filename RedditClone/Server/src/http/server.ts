@@ -1,4 +1,7 @@
-import express, { type Router, type Express } from "express"
+import express, { type Router, type Express, type Request, type Response, type NextFunction } from "express"
+import { postRouter } from "../modules/post/routes.js";
+import { ErrorHandler } from "./error/handler.js";
+import { sendResponse } from "./response/index.js";
 
 export class Server {
   public app: Express;
@@ -15,6 +18,12 @@ export class Server {
     return this;
   }
 
+  registerRequireMiddleware() {
+    this.app.use(express.json());
+    return this;
+  }
+
+
   registerHealthCheckRoute() {
     // to check is server is properly responding
     this.app.get("/", (req, res) => {
@@ -26,25 +35,22 @@ export class Server {
     return this;
   }
 
-  createGlobalPrefix(prefix: string) {
-    // middleware
-    this.app.use(`/${prefix}`, (req, res, next) => {
-      console.log(
-        `Global prefix ${prefix} applied to request: ${req.method} ${req.url}`,
-      );
-      next();
-    });
+  registerModuleRouter(version: string, prefix: string, router: Router) {
+    this.app.use(`/api/${version}/${prefix}`, router);
     return this;
   }
 
-  registerRoutes(prefix: string, router: Router) {
-    this.app.use(`/api/${prefix}`, router);
-    return this ;
-  }
-
-  registerModuleRouter(baseRouter: Router, moduleRouter: Router) {
-    this.app.use(baseRouter, moduleRouter);
+  registerRequestErrorHandler() {
+    this.app.use(
+      (err: any, req: Request, res: Response, next: NextFunction) => {
+        const handledError = new ErrorHandler(err);
+        const responsePayload = handledError.handle();
+        return sendResponse({
+          res,
+          ...responsePayload,
+        });
+      },
+    );
     return this;
   }
-
 }
