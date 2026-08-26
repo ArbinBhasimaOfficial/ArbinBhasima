@@ -6,6 +6,18 @@ info:
 http:
   method: POST
   url: "{{BASE_URL}}/api/v1/post"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "title 2",
+        "content": "content 2",
+        "images": [],
+        "createdBy": {
+          "id": "Abc",
+          "name": "zion"
+        }
+      }
   auth: inherit
 
 settings:

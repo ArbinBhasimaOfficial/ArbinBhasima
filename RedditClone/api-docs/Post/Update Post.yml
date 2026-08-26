@@ -10,6 +10,18 @@ http:
     - name: id
       value: "{{PostId}}"
       type: path
+  body:
+    type: json
+    data: |-
+      {
+        "title": "title 2",
+            "content": "content 2",
+            "images": [],
+            "createdBy": {
+              "id": "Abc",
+              "name": "Arbin"
+            }
+      }
   auth: inherit
 
 settings:
